@@ -1,0 +1,249 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Fixed: moved .button outside html, body */
+.button1 {
+  color: rgb(0, 0, 0);
+  padding: 50px 90px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 30px;
+  font-size: 40px;
+  position: absolute;
+  cursor: pointer;
+  background-color: #94ebe3;
+  transition: background-color 0.3s ease;
+  z-index: 10; /* ensures it's above canvas */
+}
+
+.button1:hover {
+  background-color: #08b1a0;
+}
+
+#task, #submitTaskBtn, #NextStepBtn  {
+  position: absolute;
+  display: none; 
+  z-index: 10; 
+  font-size: 20px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+/* Input field */
+#task {
+  top: 240px;
+  left: 50px;
+  width: 250px;
+}
+
+/* Submit button */
+#submitTaskBtn {
+  top: 240px;
+  left: 360px;
+  background-color: #94ebe3;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submitTaskBtn:hover {
+  background-color: #08b1a0;
+}
+
+/* Next Page button  to go to page 3*/
+#NextStepBtn {
+  top: 700px;
+  left: 1250px;
+  background-color: #94ebe3;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#NextStepBtn:hover {
+  background-color: #08b1a0;
+}
+
+/* Style the dropdown */
+select {
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background-color: #94ebe3;
+  color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 20;  /* Ensure dropdown is visible above other content */
+  position: absolute;
+}
+
+/* Hover effect for the dropdown */
+select:hover {
+  background-color: #08b1a0;
+}
+
+/* Weather */
+* {
+    font-family: "Rimouski", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #010812;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: absolute; /* or fixed */
+    top: 130px;          /* adjust these */
+    left: 1150px;        /* adjust these */
+    width: 250px;
+    background-color: lightgrey;
+    border-radius: 20px;
+    padding-bottom: 15px;
+    z-index: 5;
+}
+
+
+.app-title {
+    width: 100%;
+    height: 50px;
+    background-color: #f172ac;
+    border-radius: 10px 10px 0 0;
+}
+
+.app-title p {
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+    font-size: 1.2em;
+    color: #010812;
+    font-weight: bold;
+}
+
+.notification {
+    background-color: #f8d7da;
+    display: none;
+    border-left: 4px solid #721c24;
+    border-radius: 0 0 8px 8px;
+}
+
+.notification p {
+    color: #721c24;
+    font-size: 1em;
+    margin: 0;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.weather-container {
+    width: 100%;
+    height: 260px;
+    background-color: lightgray;
+    padding-top: 10px;
+}
+
+.weather-icon {
+    width: 100%;
+    height: 128px;
+}
+
+.weather-icon img {
+    display: block;
+    margin: 0 auto;
+}
+
+.temperature-value {
+    width: 100%;
+    height: 60px;
+}
+
+.temperature-value p {
+    margin: 0;
+    color: black;
+    font-size: 4em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.temperature-value span {
+    color: black;
+    font-size: 0.5em;
+}
+
+.temperature-description p {
+    padding: 8px;
+    margin: 0;
+    color: lightgray;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.location p {
+    margin: 0;
+    padding: 0;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+}
+
+.datetime-box {
+    position: absolute;
+    top: 480px;
+    left: 1150px; 
+    width: 250px;
+    background-color: lightgrey;
+    border-radius: 20px;
+    padding-bottom: 15px;
+    z-index: 5;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: "Rimouski", sans-serif;
+}
+
+.datetime-title {
+    width: 100%;
+    height: 50px;
+    background-color: #f172ac;
+    border-radius: 10px 10px 0 0;
+}
+
+.datetime-title p {
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+    font-size: 1.2em;
+    color: #010812;
+    font-weight: bold;
+}
+
+.datetime-content {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.datetime-content p {
+    margin: 0;
+    font-size: 1.2em;
+    color: black;
+}
+
+
+
+
+/* Ensure the canvas is behind other elements */
+canvas {
+  display: block;
+  z-index: 0;
+}
